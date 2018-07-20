@@ -1,4 +1,5 @@
 function onReady() {
+  let toDoId = 0;
   const TO_DOS = [];
   const ADD_TO_DO_FORM = document.getElementById('addToDoForm');
 
@@ -8,8 +9,12 @@ function onReady() {
 
     TO_DOS.push({
       title: NEW_TO_DO_TEXT.value,
-      complete: false
+      complete: false,
+      id: toDoId.value
     });
+
+    toDoId++;
+    console.log(TO_DOS.id);
 
     NEW_TO_DO_TEXT.value = '';
 
