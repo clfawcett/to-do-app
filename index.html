@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-Do App</title>
-  </head>
-  <body>
-    <h1>To-Do App</h1>
-
-    <form id="addToDoForm">
-      <label for="newToDoText">New To-Do:</label>
-      <input type="text" id="newToDoText">
-      <button type="submit">Add To-Do!</button>
-    </form>
-    <ul id="toDoList">
-    </ul>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>To-Do App</title>
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout-icon"></div>
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class ="mdl-layout-title">To-Do App</span>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <!-- Navigation -->
+       <span class="mdl-layout-title">Categories</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Home</a>
+          <a class="mdl-navigation__link" href="">Grocery</a>
+          <a class="mdl-navigation__link" href="">Work</a>
+        </nav>
+      </div>
+    <main id="toDoApp" class="mdl-layout__content">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <form id="addToDoForm">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="newToDoText">New To-Do:</label>
+              <input class="mdl-textfield__input" "text" id="newToDoText">
+              <button id="submitButton" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" type="submit"><i class="material-icons">add</i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <ul id="toDoList">
+          </ul>
+        </div>
+      </div>
+      </div>
+    </main>
+  </div>
     <script src="js/app.js"></script>
+
   </body>
 </html>
